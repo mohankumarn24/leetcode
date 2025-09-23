@@ -10,11 +10,10 @@ class LC408 {
         int i = 0; // pointer for word
         int j = 0; // pointer for abbr
 
+        // sahan --> s3n
         while (i < word.length() && j < abbr.length()) {
-            char c = abbr.charAt(j);
-
-            if (Character.isDigit(c)) {
-                if (c == '0') return false; // leading zero invalid
+            if (Character.isDigit(abbr.charAt(j))) {
+                if (abbr.charAt(j) == '0') return false; // leading zero invalid
 
                 int start = j;
                 while (j < abbr.length() && Character.isDigit(abbr.charAt(j))) {
@@ -23,18 +22,17 @@ class LC408 {
                 int num = Integer.parseInt(abbr.substring(start, j));
                 i += num;
             } else {
-                if (word.charAt(i) != c) return false;
+                if (word.charAt(i) != abbr.charAt(j)) return false;
                 i++;
                 j++;
             }
         }
-
         return i == word.length() && j == abbr.length();
     }
 
     public static void main(String[] args) {
-        LC408 sol = new LC408();
 
+        LC408 sol = new LC408();
         System.out.println(sol.validWordAbbreviation("sahan", "s3n")); // true
         //System.out.println(sol.validWordAbbreviation("internationalization", "i12iz4n")); // true
         //System.out.println(sol.validWordAbbreviation("apple", "a2e")); // false
