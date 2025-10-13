@@ -1,4 +1,4 @@
-package com.src.main.leetcode;
+package com.src.main.leetcode.misc;
 
 /**
  * 1249. Minimum Remove to Make Valid Parentheses

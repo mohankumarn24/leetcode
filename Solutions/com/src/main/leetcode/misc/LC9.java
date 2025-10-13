@@ -1,4 +1,4 @@
-package com.src.main.leetcode;
+package com.src.main.leetcode.misc;
 
 /**
  * 9. Palindrome Number

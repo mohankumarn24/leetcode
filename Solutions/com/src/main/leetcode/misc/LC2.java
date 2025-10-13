@@ -1,4 +1,6 @@
-package com.src.main.leetcode;
+package com.src.main.leetcode.misc;
+
+import com.src.main.leetcode.ListNode;
 
 /**
  * 2. Add Two Numbers
