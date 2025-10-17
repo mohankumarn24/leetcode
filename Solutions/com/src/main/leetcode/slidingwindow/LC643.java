@@ -4,36 +4,35 @@ package com.src.main.leetcode.slidingwindow;
  * 643. Maximum Average Subarray I
  */
 public class LC643 {
+
     public double findMaxAverage(int[] nums, int k) {
-
         int n = nums.length;
-        int sum = 0;
+        double windowSum = 0;
 
-        // Compute initial sum of first k elements
+        // Step 1: Calculate sum of first k elements
         for (int i = 0; i < k; i++) {
-            sum += nums[i];
+            windowSum += nums[i];
         }
 
-        int maxSum = sum;
+        double maxSum = windowSum;
 
-        // Slide the window
+        // Step 2: Slide the window
         for (int i = k; i < n; i++) {
-            sum = sum - nums[i - k] + nums[i];
-            if (sum > maxSum) {
-                maxSum = sum;
-            }
+            windowSum += nums[i] - nums[i - k];
+            maxSum = Math.max(maxSum, windowSum);
         }
 
-        // Maximum average
-        return (double) maxSum / k;
+        // Step 3: Return average
+        return maxSum / k;
     }
 
-    // Main method to test
     public static void main(String[] args) {
-
-        LC643 solution = new LC643();
+        
+        LC643 sol = new LC643();
         int[] nums = {1, 12, -5, -6, 50, 3};
         int k = 4;
-        System.out.println(solution.findMaxAverage(nums, k)); // Output: 12.75
+        double result = sol.findMaxAverage(nums, k);
+        System.out.println("Maximum average subarray = " + result);
     }
 }
+
