@@ -1,4 +1,4 @@
-package com.src.main.leetcode.misc;
+package com.src.main.leetcode.problems;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -19,6 +19,8 @@ public class LC20 {
                     ']', '['
             );
 
+            // ()[]{}
+            // {[]}
             Deque<Character> stack = new ArrayDeque<>();
             for (char c : s.toCharArray()) {
                 // its closing bracket

@@ -1,4 +1,4 @@
-package com.src.main.leetcode.misc;
+package com.src.main.leetcode.problems;
 
 /**
  * 408. Valid Word Abbreviation

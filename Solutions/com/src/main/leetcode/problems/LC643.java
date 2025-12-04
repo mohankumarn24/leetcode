@@ -1,4 +1,4 @@
-package com.src.main.leetcode.slidingwindow;
+package com.src.main.leetcode.problems;
 
 /**
  * 643. Maximum Average Subarray I
